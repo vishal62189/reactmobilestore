@@ -1,0 +1,9 @@
+.Footer {
+  height: 10vh;
+  margin: 20px 0 0;
+  background-color: black;
+  display: flex;
+  flex-flow: column-reverse;
+  color: white;
+  font-size: 12px !important;
+}

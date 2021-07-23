@@ -1,0 +1,9 @@
+.ProductImage {
+  width: 80%;
+  height: 80%;
+  border: 1px solid black;
+}
+.ProductImageContainer {
+  width: 100%;
+  height: 100%;
+}

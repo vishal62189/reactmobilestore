@@ -1,0 +1,78 @@
+{
+  "productItems": [
+    {
+      "id": 1,
+      "deviceName": "ABC",
+      "price": "100",
+      "modelNumber": "456",
+      "colors": "Black,Gold",
+      "screenSize": "6 inch",
+      "operatingSystem": "Android",
+      "ram": "4 GB",
+      "storage": "128 GB"
+    },
+    {
+      "id": 2,
+      "deviceName": "EDR",
+      "price": "200",
+      "modelNumber": "567",
+      "colors": "Black,Gold",
+      "screenSize": "6 inch",
+      "operatingSystem": "Android",
+      "ram": "6 GB",
+      "storage": "128 GB"
+    },
+    {
+      "id": 3,
+      "deviceName": "WSE",
+      "price": "200",
+      "modelNumber": "454",
+      "colors": "Black,Gold,Silver",
+      "screenSize": "6 inch",
+      "operatingSystem": "Android",
+      "ram": "6 GB",
+      "storage": "128 GB"
+    },
+    {
+      "id": 4,
+      "deviceName": "DFG",
+      "price": "100",
+      "modelNumber": "768",
+      "colors": "Black,Silver",
+      "screenSize": "6 inch",
+      "operatingSystem": "Android",
+      "ram": "4 GB",
+      "storage": "128 GB"
+    }
+  ],
+  "cart": [
+    {
+      "id": 3,
+      "deviceName": "WSE",
+      "price": "200",
+      "modelNumber": "454",
+      "colors": "Black,Gold,Silver",
+      "screenSize": "6 inch",
+      "operatingSystem": "Android",
+      "ram": "6 GB",
+      "storage": "128 GB",
+      "quantity": 5,
+      "inCart": true,
+      "itemTotal": 1000
+    },
+    {
+      "id": 2,
+      "deviceName": "EDR",
+      "price": "200",
+      "modelNumber": "567",
+      "colors": "Black,Gold",
+      "screenSize": "6 inch",
+      "operatingSystem": "Android",
+      "ram": "6 GB",
+      "storage": "128 GB",
+      "quantity": 1,
+      "inCart": false,
+      "itemTotal": 200
+    }
+  ]
+}

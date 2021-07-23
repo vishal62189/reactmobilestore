@@ -1,0 +1,16 @@
+.Cartitem {
+  min-height: 80px;
+  max-height: 80px;
+}
+.Cartitem input {
+  width: inherit;
+}
+.ProductImage {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+.ProductImageContainer {
+  width: 100%;
+  height: 90%;
+}

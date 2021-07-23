@@ -1,0 +1,12 @@
+.ListingItems {
+  padding: 1em;
+}
+.ProductImage {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+}
+.ProductImageContainer {
+  width: 100%;
+  height: 60%;
+}
