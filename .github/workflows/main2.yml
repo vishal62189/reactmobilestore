@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Compare lighthouse data
-        uses: mdsadiq/lighthouse-compare@v1.2.0
+      - name: Run Lighthouse audit
+        uses: treosh/lighthouse-ci-action@v9
         with:
-          lhciServerURL: https://example.com
-          githubToken: ${{ secret.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 }}
+          urls: https://tatacliq.com
+          uploadArtifacts: true # Upload the report as an artifact
+          temporaryPublicStorage: true # Store the report publicly for a short time
