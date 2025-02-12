@@ -1,0 +1,12 @@
+name: Audit live site
+on: push
+jobs:
+  lighthouse-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Compare lighthouse data
+        uses: mdsadiq/lighthouse-compare@v1.2.0
+        with:
+          lhciServerURL: https://example.com
+          githubToken: ${{ secret.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 }}
