@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Audit live URL
-      uses: jakejarvis/lighthouse-action@v0.3.2
+      uses: jakejarvis/lighthouse-action@v0.2.0
       with:
         url: 'https://tatacliq.com'
     - name: Upload results as an artifact
