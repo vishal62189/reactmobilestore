@@ -17,3 +17,5 @@ jobs:
         with:
           name: lighthouse-report
           path: ./lighthouse-output
+          githubToken: ${{ secrets.GITHUB_TOKEN  }}
+
