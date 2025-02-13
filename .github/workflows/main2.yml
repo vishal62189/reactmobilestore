@@ -10,7 +10,6 @@ jobs:
         with:
           urls: |
             https://www.tatacliq.com/  # Replace with your URL
-          uploadArtifacts: true  # Upload the report as an artifact
           temporaryPublicStorage: true # Store the report publicly for a short time
 
       - name: Upload Lighthouse Report to Google Drive
