@@ -24,7 +24,7 @@ jobs:
           echo "$GOOGLE_DRIVE_SERVICE_ACCOUNT_KEY" > service-account-key.json
 
           # Install gdrive CLI
-          wget -O gdrive https://github.com/prasmussen/gdrive/releases/download/2.1.1/gdrive_2.1.1_linux_386
+          wget -O gdrive https://github.com/prasmussen/gdrive/releases/download/2.1.1/gdrive_2.1.1_linux_386.tar.gz
           chmod +x gdrive
           ./gdrive about --service-account service-account-key.json
 
