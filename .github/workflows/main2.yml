@@ -9,7 +9,9 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
-            https://www.tatacliq.com/  # Replace with your URL
+            https://www.tatacliq.com/
+          uploadArtifacts: true
+          artifactName: ./lighthouse-report
           temporaryPublicStorage: true # Store the report publicly for a short time
 
       - name: Upload Lighthouse Report to Google Drive
