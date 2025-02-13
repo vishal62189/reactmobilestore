@@ -31,7 +31,7 @@ jobs:
 
           # Upload the Lighthouse report
           ZIP_FILE="lighthouse-report-$(date +%Y%m%d%H%M%S).zip"
-          zip -r $ZIP_FILE ./lighthouse-results
+          zip -r $ZIP_FILE ./lighthouse-report
           ./gdrive upload --parent $GOOGLE_DRIVE_FOLDER_ID $ZIP_FILE --service-account service-account-key.json
           
 
