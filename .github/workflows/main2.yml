@@ -8,7 +8,30 @@ jobs:
       - name: Run Lighthouse audit
         uses: treosh/lighthouse-ci-action@v9
         with:
-          urls: https://tatacliq.com
-          temporaryPublicStorage: true # Store the report publicly for a short time
+          urls: |
+            https://www.tatacliq.com/  # Replace with your URL
+          uploadArtifacts: true  # Upload the report as an artifact
+          outputDirectory: ./lighthouse-results  # Custom output directory
+
+      - name: Upload Lighthouse Report to Google Drive
+        env:
+          GOOGLE_DRIVE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_KEY }}
+          GOOGLE_DRIVE_FOLDER_ID: 1Z_rWE4IZiZFUoLqcgXx2ovkEhz85ax0W  # Replace with your Google Drive folder ID
+        run: |
+          # Install required tools
+          sudo apt-get install -y jq
+
+          # Authenticate with Google Drive using the service account key
+          echo "$GOOGLE_DRIVE_SERVICE_ACCOUNT_KEY" > service-account-key.json
+
+          # Install gdrive CLI
+          wget -O gdrive https://github.com/prasmussen/gdrive/releases/download/2.1.1/gdrive_2.1.1_linux_386
+          chmod +x gdrive
+          ./gdrive about --service-account service-account-key.json
+
+          # Upload the Lighthouse report
+          ZIP_FILE="lighthouse-report-$(date +%Y%m%d%H%M%S).zip"
+          zip -r $ZIP_FILE ./lighthouse-results
+          ./gdrive upload --parent $GOOGLE_DRIVE_FOLDER_ID $ZIP_FILE --service-account service-account-key.json
           
 
