@@ -12,7 +12,6 @@ jobs:
           uploadArtifacts: true # Upload the report as an artifact
           temporaryPublicStorage: true # Store the report publicly for a short time
           outputDirectory: ./lightoutput  # Custom output directory
-          githubToken: ${{ secret.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 }}
       - name: Upload Lighthouse Report
         uses: actions/upload-artifact@v3
         with:
