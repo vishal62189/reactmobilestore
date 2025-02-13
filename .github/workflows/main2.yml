@@ -11,28 +11,11 @@ jobs:
           urls: |
             https://www.tatacliq.com/
           uploadArtifacts: true
-          artifactName: lighthousereport
+          artifactName: lighthouse-report
           temporaryPublicStorage: true # Store the report publicly for a short time
-
-      - name: Upload Lighthouse Report to Google Drive
-        env:
-          GOOGLE_DRIVE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_DRIVE_SERVICE_ACCOUNT_KEY }}
-          GOOGLE_DRIVE_FOLDER_ID: 1Z_rWE4IZiZFUoLqcgXx2ovkEhz85ax0W  # Replace with your Google Drive folder ID
-        run: |
-          # Install required tools
-          sudo apt-get install -y jq
-
-          # Authenticate with Google Drive using the service account key
-          echo "$GOOGLE_DRIVE_SERVICE_ACCOUNT_KEY" > service-account-key.json
-
-          # Install gdrive CLI
-          wget -O gdrive https://github.com/prasmussen/gdrive/releases/download/2.1.1/gdrive_2.1.1_linux_386.tar.gz
-          chmod +x gdrive
-          ./gdrive about --service-account service-account-key.json
-
-          # Upload the Lighthouse report
-          ZIP_FILE="lighthousereport-$(date +%Y%m%d%H%M%S).zip"
-          zip -r $ZIP_FILE lighthousereport
-          ./gdrive upload --parent $GOOGLE_DRIVE_FOLDER_ID $ZIP_FILE --service-account service-account-key.json
-          
-
+      - name: Upload Lighthouse Report
+        uses: actions/upload-artifact@v4.6.0
+        with:
+          name: lighthouse-report
+          path: ./lighthouse-output
+          githubToken: ${{ secrets.GITHUB_TOKEN  }}
