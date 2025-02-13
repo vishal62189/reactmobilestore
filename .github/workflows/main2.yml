@@ -9,13 +9,6 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: https://tatacliq.com
-          uploadArtifacts: true # Upload the report as an artifact
           temporaryPublicStorage: true # Store the report publicly for a short time
-          outputDirectory: ./lighthouse-output  # Custom output directory
-      - name: Upload Lighthouse Report
-        uses: actions/upload-artifact@v4
-        with:
-          name: lighthouse-report
-          path: ./lighthouse-output
-          githubToken: ${{ secrets.GITHUB_TOKEN  }}
+          
 
