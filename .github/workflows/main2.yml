@@ -11,7 +11,7 @@ jobs:
           urls: |
             https://www.tatacliq.com/
           uploadArtifacts: true
-          artifactName: ./lighthouse-report
+          artifactName: lighthousereport
           temporaryPublicStorage: true # Store the report publicly for a short time
 
       - name: Upload Lighthouse Report to Google Drive
@@ -31,8 +31,8 @@ jobs:
           ./gdrive about --service-account service-account-key.json
 
           # Upload the Lighthouse report
-          ZIP_FILE="lighthouse-report-$(date +%Y%m%d%H%M%S).zip"
-          zip -r $ZIP_FILE ./lighthouse-report
+          ZIP_FILE="lighthousereport-$(date +%Y%m%d%H%M%S).zip"
+          zip -r $ZIP_FILE lighthousereport
           ./gdrive upload --parent $GOOGLE_DRIVE_FOLDER_ID $ZIP_FILE --service-account service-account-key.json
           
 
