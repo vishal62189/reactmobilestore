@@ -1,9 +1,9 @@
 module.exports = {
   ci: {
     collect: {
-      url: ['https://example.com'],  // URLs to test
+      url: ['https://www.tatacliq.com/'],  // URLs to test
       settings: {
-        emulatedFormFactor: 'desktop',  // Use desktop emulation
+        formFactor: 'desktop',  // Use desktop emulation
         throttling: {
           rttMs: 40,
           throughputKbps: 10 * 1024,
