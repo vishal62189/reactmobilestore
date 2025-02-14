@@ -1,7 +1,7 @@
 module.exports = {
   ci: {
     collect: {
-      url: ['https://example.com'],  // URLs to test
+      url: ['https://www.tatacliq.com/'],  // URLs to test
       settings: {
         formFactor: 'desktop',  // Use 'desktop' or 'mobile'
         screenEmulation: {
@@ -11,6 +11,7 @@ module.exports = {
           deviceScaleFactor: 1,
           mobile: false,    // Disable mobile emulation
         },
+		emulatedUserAgent:'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
         throttling: {
           rttMs: 40,
           throughputKbps: 10 * 1024,
