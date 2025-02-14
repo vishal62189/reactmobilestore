@@ -9,6 +9,7 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: https://tatacliq.com
+          configPath: ./lighthouse-config.js
           temporaryPublicStorage: true # Store the report publicly for a short time
           
 
