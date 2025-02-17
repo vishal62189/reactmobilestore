@@ -8,7 +8,7 @@ jobs:
       - name: Run Lighthouse audit
         uses: treosh/lighthouse-ci-action@v9
         with:
-          urls: https://www.tatacliq.com
+          urls: https://www.tatacliq.com/utsa-by-westside-navy-floral-embroidered-cotton-blend-a-line-kurta/p-mp000000025004251
           configPath: ./lighthouse-config.js
           temporaryPublicStorage: true # Store the report publicly for a short time
           
