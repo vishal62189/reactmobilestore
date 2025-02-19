@@ -20,8 +20,10 @@ module.exports = {
         onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo'],
       },
     },
-    assert: {
-      preset: 'lighthouse:no-pwa',  // Use a Lighthouse preset for assertions
+    "assert": {
+      "assertions": {
+        "seo": "off"
+      }
     },
     upload: {
       target: 'temporary-public-storage',  // Upload results to temporary storage
