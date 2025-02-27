@@ -1,8 +1,8 @@
-name: Run Every 5 Minutes
+name: Run Every 14 Minutes
 
 on:
   schedule:
-    - cron: '15 2 * * *'  # Runs every 5 minutes
+    - cron: '19 14 * * *'  # Runs every 5 minutes
 
 jobs:
   run-script:
