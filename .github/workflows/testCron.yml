@@ -2,7 +2,7 @@ name: Run Every 14 Minutes
 
 on:
   schedule:
-    - cron: '19 14 * * *'  # Runs every 5 minutes
+    - cron: '0 15 * * *'  # Runs every 5 minutes
 
 jobs:
   run-script:
@@ -15,4 +15,4 @@ jobs:
 
       # Print a message
       - name: Print a message
-        run: echo "This job runs every 5 minutes!"
+        run: echo "This job runs every 8:30 pm  minutes!"
